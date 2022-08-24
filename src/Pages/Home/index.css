@@ -1,0 +1,41 @@
+.table_school {
+    /* float: right; */
+    /* width: 14rem; */
+    /* padding: 30px; */
+    border-left: 2px solid;
+    height: 100%;
+}
+
+.table, th {
+    border: 1px solid gray;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+td:nth-child(2) {
+    width: 100%;
+}
+th:nth-child(1) {
+    padding-left: 20px;
+    column-width: 50px;
+} 
+
+td:nth-child(1) {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+.board {
+    float: right;
+    right: 20%;  
+    padding: 30px;
+    height: 100%;
+}
+
+.border-right {
+    border-right: 1px solid #ddd;
+}

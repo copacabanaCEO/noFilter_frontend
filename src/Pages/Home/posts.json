@@ -1,0 +1,52 @@
+{"posts": [
+    {
+        "nofilter_highschool_id": 0,
+        "name": "J.K. Mullen High School",
+        "subject": "It is really cool!",
+        "content": "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action",
+        "view": 976,
+        "recommend": 88,
+        "updated_at": "August 2022",
+        "comment": 34
+    },
+    {
+        "nofilter_highschool_id": 1,
+        "name": "Lynn Classical High School",
+        "subject": "It is really cool!",
+            "content": "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.",
+        "view": 976,
+        "recommend": 88,
+        "updated_at": "August 2022",
+        "comment": 34
+    },
+    {
+        "nofilter_highschool_id": 2,
+        "name": "South Anchorage HS",
+        "subject": "It is really cool!",
+        "content": "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.",
+        "view": 976,
+        "recommend": 88,
+        "updated_at": "August 2022",
+        "comment": 34
+    },
+    {
+        "nofilter_highschool_id": 3,
+        "name": "Copacabana High School",
+        "subject": "It is really cool!",
+        "content": "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.",
+        "view": 976,
+        "recommend": 88,
+        "updated_at": "August 2022",
+        "comment": 34
+    },
+    {
+      "nofilter_highschool_id": 4,
+      "name": "Ahmed Ali's Kindergarten",
+      "subject": "It is really cool!",
+        "content": "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.",
+        "view": 976,
+        "recommend": 88,
+        "updated_at": "August 2022",
+        "comment": 34
+    }
+  ]}

@@ -1,0 +1,27 @@
+{"nofilter_highschool_ratings": [
+  {
+    "nofilter_highschool_id": 0,
+    "name": "J.K. Mullen High School",
+    "average_score": 92
+  },
+  {
+    "nofilter_highschool_id": 1,
+    "name": "Lynn Classical High School",
+    "average_score": 94
+  },
+  {
+    "nofilter_highschool_id": 2,
+    "name": "South Anchorage HS",
+    "average_score": 90
+  },
+  {
+    "nofilter_highschool_id": 3,
+    "name": "Copacabana High School",
+    "average_score": 100
+  },
+  {
+    "nofilter_highschool_id": 4,
+    "name": "Ahmed Ali's Kindergarten",
+    "average_score": 101
+  }
+]}
