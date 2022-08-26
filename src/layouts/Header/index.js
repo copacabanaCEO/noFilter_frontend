@@ -13,7 +13,7 @@ const Header = () => (
             <SearchField />
             <div className="flex flex-grow items-center">
                 <div className="xs:hidden sm:hidden md:hidden">
-                    <Navigation/>
+                    <Navigation />
                 </div>
                 <div className="flex xs:hidden items-center ml-auto">
                     <LoginButton />
