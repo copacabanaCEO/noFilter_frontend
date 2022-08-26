@@ -3,7 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import { Link } from "react-router-dom"
 import { BrandButtonDefault } from "../../library/Button"
 
-const SignUpButton = () => { 
+function SignUpButton(props) { 
+    const logged = props.log;
+    console.log(logged)
     const [visible, setVisible] = useState(false)
     const [title, setTitle] = useState(localStorage.getItem('title'))
     const [showSignUpButton, setShowSignUpButton] = useState(true);

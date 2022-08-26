@@ -16,7 +16,7 @@ const Header = () => (
                     <Navigation />
                 </div>
                 <div className="flex xs:hidden items-center ml-auto">
-                    <LoginButton />
+                    <LoginButton log = {false}/>
                 </div>
             </div>
 
