@@ -7,7 +7,7 @@ const Logo = () => (
     <Navbar>
         <Nav  >
         <Nav.Link href="/index">
-            <span className="font-bold text-white text-2xl flex flex-col bg-brand w-12 h-12 rounded-full justify-center items-center text-center cursor-pointer
+        <span className="font-bold text-white text-2xl flex flex-col bg-brand w-12 h-12 rounded-full justify-center items-center text-center cursor-pointer
             ">
             NF
         </span></Nav.Link>

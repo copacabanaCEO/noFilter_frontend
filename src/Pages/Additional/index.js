@@ -19,7 +19,7 @@ for (let i=0; i<data.schools.length; i++) {
 function BasicExample() {
   let navigate = useNavigate(); 
   const routeChange = () =>{ 
-    let path = "/"; 
+    let path = "/index"; 
     navigate(path, {state: {name:"aknur"}});
   }
 
