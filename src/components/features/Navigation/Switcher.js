@@ -5,7 +5,8 @@ import Home, {
     PostsPage,
     MyPage,
     Profile,
-    AdditionalPage
+    AdditionalPage,
+    SettingsPage
 } from "../../../Pages/index.js"
 import Main from "../../../Pages/Main"
 import KakaoLogin from "../../../Pages/Login";
@@ -20,6 +21,7 @@ const Switcher = () => (
             <Route path="/signup" element={ <Main />} />
             <Route path="/additional" element={ <AdditionalPage />} />
             <Route path="/kakaologin" element={<KakaoLogin />} />
+            <Route path="/mypage/settings" element={ <SettingsPage />} />
         </Routes>
 )
 

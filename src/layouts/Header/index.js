@@ -5,7 +5,11 @@ import SearchField from "../../components/features/Search"
 import Navigation from "../../components/features/Navigation"
 import SignUpButton from "../../components/features/Signup"
 
-const Header = () => (
+const Header = () =>  {
+const pull_data = (data) => {
+    console.log(data);
+}
+return (
     <Fragment>
         <header className="
                            flex justify-start bg-brand-dark py-2 px-10 items-center ">
@@ -16,11 +20,11 @@ const Header = () => (
                     <Navigation />
                 </div>
                 <div className="flex xs:hidden items-center ml-auto">
-                    <LoginButton log = {false}/>
+                    <LoginButton func={pull_data} />
                 </div>
             </div>
 
         </header>
-    </Fragment>)
+    </Fragment>)}
 
 export default Header

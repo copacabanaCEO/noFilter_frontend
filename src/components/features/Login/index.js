@@ -3,9 +3,8 @@ import Nav from 'react-bootstrap/Nav';
 import { Link } from "react-router-dom"
 import { BrandButtonDefault } from "../../library/Button"
 
-function SignUpButton(props) { 
-    const logged = props.log;
-    console.log(logged)
+const SignUpButton = (props) => { 
+    props.func("adsgfkjhagerutfya")
     const [visible, setVisible] = useState(false)
     const [title, setTitle] = useState(localStorage.getItem('title'))
     const [showSignUpButton, setShowSignUpButton] = useState(true);
@@ -56,10 +55,10 @@ function SignUpButton(props) {
                             <p className="text-gray-500 text-xs font-sans font-semibold mt-6">MyPage</p>
                             <div className="mt-2">
                                 <div className={`flex justify-start my-2`}>
-                                    <Nav.Link href={`/mypage/`} className="text-gray-700 text-base-14 hover:text-brand" >Profile</Nav.Link>
+                                    <Nav.Link href={`/mypage/profile`} className="text-gray-700 text-base-14 hover:text-brand" >Profile</Nav.Link>
                                 </div>
                                 <div className={`flex justify-start my-2`}>
-                                    <Nav.Link href={`/mypage/`} className="text-gray-700 text-base-14 hover:text-brand" >Settings</Nav.Link>
+                                    <Nav.Link href={`/mypage/settings`} className="text-gray-700 text-base-14 hover:text-brand" >Settings</Nav.Link>
                                 </div>
                             </div>
                             <p className="text-gray-500 text-xs font-sans font-semibold mt-6">General</p>
