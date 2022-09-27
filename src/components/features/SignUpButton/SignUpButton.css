@@ -1,0 +1,80 @@
+.signUpButton {
+  position: relative;
+  display: flex;
+}
+.goToSignUp {
+  text-align: center;
+  color: white !important;
+  padding: 0.6rem 2rem !important;
+  border-radius: 1.4rem;
+  background-color: purple;
+  font-size: 1.2rem !important;
+  margin: 0 0.3rem;
+  min-width: 8.16rem;
+  max-height: 3rem;
+  text-decoration: none;
+}
+.goToLogin {
+  text-align: center;
+  color: black !important;
+  padding: 0.6rem 2rem !important;
+  border-radius: 1.4rem;
+  background-color: white;
+  font-size: 1.2rem !important;
+  margin: 0 0.3rem;
+  min-width: 8.16rem;
+  max-height: 3rem;
+  text-decoration: none;
+}
+.userTitle {
+  color: white !important;
+  font-size: 1.5rem;
+}
+
+.myPageMenuWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.userMenuWrap {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 0 1rem 1rem;
+  background-color: red;
+  width: 200px;
+  top: 3rem;
+  right: 0;
+  border: 1px solid #cccccc;
+  background-color: white;
+  border-radius: 1rem;
+  z-index: 5;
+}
+.myPageMenuTitle {
+  font-size: 1.2rem;
+  color: #888888;
+  border-bottom: 1px solid #cccccc;
+  padding: 0 0.3rem 0.3rem;
+}
+.myPageProfile {
+  margin: 0.5rem;
+  font-size: 0.9rem;
+}
+.MyPageSettings {
+  margin: 0.5rem;
+  font-size: 0.9rem;
+}
+.generalMenuTitle {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #888888;
+  border-bottom: 1px solid #cccccc;
+  padding: 0 0.3rem 0.3rem;
+}
+.generalLogout {
+  margin: 0.5rem;
+  font-size: 0.9rem;
+}

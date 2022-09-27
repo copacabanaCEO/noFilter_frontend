@@ -1,0 +1,318 @@
+.additonal {
+  position: relative;
+  background-color: #fafafa;
+  width: 100%;
+  height: 120vh;
+}
+
+.additonalInnerAlign {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 70%;
+}
+
+.additonalInner {
+  position: absolute;
+  left: calc(50% - 12rem);
+  top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24rem;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0.1rem #e0e0e0;
+}
+
+.additonalInnerTitle {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  padding: 0 0.5rem;
+  font-weight: bold;
+  color: #666666;
+  border-bottom: 3px solid #28b39b;
+}
+
+.selectedPositionTitle {
+  font-size: 1rem;
+  margin: 2rem 0 0.5rem 0;
+  font-weight: 500;
+  border-bottom: 2px solid #28b39b;
+}
+
+.selectPositionWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0 0.5rem;
+  background-color: #f8f8f8;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+}
+
+.selectPosition {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectPositionSpan {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0.3rem;
+}
+
+.selectedArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.selected {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.selectedHighSchoolTitle {
+  font-size: 1rem;
+  margin: 2rem 0 0.5rem 0;
+  font-weight: 500;
+  border-bottom: 2px solid #28b39b;
+}
+
+.selectedHighSchoolWrap {
+  width: 100%;
+}
+
+.highSchoolSelect {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem 0.3rem 0.3rem 0;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid #cccccc;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.highSchoolText {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  outline: none;
+}
+
+.highSchoolOption {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.3rem 0.3rem 0.3rem 0;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #cccccc;
+  border-radius: 1rem 0 0 1rem;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.showHighSchoolButton {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 0.5rem solid transparent;
+  border-top: 0.5rem solid transparent;
+  border-left: 0.6em solid #aaaaaa;
+  border-right: 0.6rem solid transparent;
+  right: 1rem;
+  top: 50%;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.highSchoolOption::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.highSchoolOption::-webkit-scrollbar-thumb {
+  background: #28b39b;
+  border-radius: 10px;
+}
+
+.highSchoolOption::-webkit-scrollbar-track {
+  background: #d5fff5;
+}
+
+.highSchoolOptionList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 0;
+  margin: 0.4rem 0.3rem;
+  border-radius: 0.5rem;
+  width: 90%;
+}
+
+.highSchoolOptionList:hover {
+  background-color: #efefef;
+}
+
+.signupSubmit {
+  margin: 3rem 0 2rem !important;
+  padding: 0.4rem 0 !important;
+  width: 70% !important;
+  border: none !important;
+  border-radius: 0.3rem !important;
+  background-color: #28b39b !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 0.9rem !important;
+}
+.signupSubmit:disabled {
+  opacity: 0.5;
+}
+
+.helpMessege {
+  color: rgb(208, 64, 64);
+  margin: 0.5rem 0;
+  padding-left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.selectedLocationTitle {
+  font-size: 1rem;
+  margin: 2rem 00.5rem 0;
+  font-weight: 500;
+  border-bottom: 2px solid #28b39b;
+}
+
+.selectedLocationWrap {
+  width: 100%;
+}
+
+.locationToggleButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem 0.3rem 0.3rem 0;
+  padding: 0.5rem 3rem;
+  cursor: pointer;
+  border: 1px solid #cccccc;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.locationOption {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.3rem 0.3rem 0.3rem 0;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #cccccc;
+  border-radius: 1rem;
+  padding: 0;
+}
+
+.locationOptionList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 0;
+  margin: 0.4rem 0.3rem;
+  border-radius: 0.5rem;
+  width: 90%;
+}
+
+.locationOptionList:hover {
+  background-color: #efefef;
+}
+
+.selectedUserBirthTitle {
+  font-size: 1rem;
+  margin: 2rem 0 1rem 0;
+  font-weight: 500;
+  border-bottom: 2px solid #28b39b;
+}
+
+.userBirthInputWrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.userBirthWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f8f8f8;
+  border-radius: 0.6rem;
+}
+.userBirthTitle {
+  font-size: 0.6rem;
+  margin: 1rem 0 0.5rem 1rem;
+  font-weight: 500;
+  color: #aaaaaa;
+}
+
+.userBirthInput {
+  width: 35%;
+  margin: 0.5rem 1rem;
+  font-weight: 500;
+  outline: none;
+  font-size: 1rem;
+  background-color: #f8f8f8;
+  letter-spacing: 0.5rem;
+}
+
+.userBirthPartition {
+  width: 5%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #cccccc;
+}
+
+.userBirthLastInput {
+  font-size: 1rem;
+  width: 5%;
+  margin: 0.5rem 0.2rem 0.5rem 1.5rem;
+  font-weight: 500;
+  outline: none;
+  background-color: #f8f8f8;
+}
+
+.userBirthInput::placeholder {
+  font-weight: 400;
+  color: #aaaaaa;
+}
+
+.userBirthLastPrivate {
+  margin: 0.4rem 0 0 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  letter-spacing: 0.4em;
+  font-weight: 600;
+}
+
+.userBirthLastInput::placeholder {
+  font-weight: 400;
+  color: #aaaaaa;
+}
