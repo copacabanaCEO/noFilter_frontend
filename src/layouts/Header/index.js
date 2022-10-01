@@ -1,30 +1,26 @@
-import React, { Fragment } from "react"
-import Logo from "../../components/features/Logo"
-import LoginButton from "../../components/features/Login"
-import SearchField from "../../components/features/Search"
-import Navigation from "../../components/features/Navigation"
-import SignUpButton from "../../components/features/Signup"
+import React, { Fragment } from "react";
+import Logo from "../../components/features/Logo";
+import SignUpButton from "../../components/features/SignUpButton/SignUpButton";
+import SearchField from "../../components/features/Search";
+import Navigation from "../../components/features/Navigation";
 
-const Header = () =>  {
-const pull_data = (data) => {
-    console.log(data);
-}
-return (
+const Header = ({ isLogin, setIsLogin }) => {
+  return (
     <Fragment>
-        <header className="
-                           flex justify-start bg-brand-dark py-2 px-10 items-center ">
-            <Logo/>
-            <SearchField />
-            <div className="flex flex-grow items-center">
-                <div className="xs:hidden sm:hidden md:hidden">
-                    <Navigation />
-                </div>
-                <div className="flex xs:hidden items-center ml-auto">
-                    <LoginButton func={pull_data} />
-                </div>
-            </div>
+      <header className="flex justify-start bg-brand-dark py-2 px-10 items-center">
+        <Logo />
+        <SearchField />
+        <div className="flex flex-grow justify-between items-center">
+          <div className="xs:hidden sm:hidden md:hidden">
+            <Navigation />
+          </div>
+          <div className="flex xs:hidden items-center ml-auto">
+            <SignUpButton isLogin={isLogin} setIsLogin={setIsLogin} />
+          </div>
+        </div>
+      </header>
+    </Fragment>
+  );
+};
 
-        </header>
-    </Fragment>)}
-
-export default Header
+export default Header;

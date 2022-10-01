@@ -7,34 +7,21 @@
 // import Select from 'react-select';
 // import CreatableSelect from 'react-select/creatable';
 
-import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Main from "./Pages/Main";
-import KakaoLogin from "./Pages/Login";
-import BasicExample from "./Pages/Additional"
-import HomePage from "./Pages/index"
-import Header from "./layouts/Header"
-import { Switcher } from "./components/features/Navigation"
+import React, { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./layouts/Header";
+import { Switcher } from "./components/features/Navigation";
 
 const App = () => {
+  const [isLogin, setIsLogin] = useState(false);
   return (
     <div>
       <BrowserRouter>
-        {/* <Routes>
-          <Route path="/" element={<BasicExample />} />
-          <Route path="/kakaologin" element={<KakaoLogin />} />
-          <Route path="/additional" element={<BasicExample />} />
-          <Route path="/index" element={(
-            <> */}
-              <Header/>
-              <Switcher/>
-            {/* </>
-          )} />
-        </Routes> */}
+        <Header isLogin={isLogin} setIsLogin={setIsLogin} />
+        <Switcher setIsLogin={setIsLogin} />
       </BrowserRouter>
     </div>
   );
 };
 
 export default App;
-

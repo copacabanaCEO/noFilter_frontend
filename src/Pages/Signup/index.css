@@ -1,0 +1,173 @@
+.signup {
+  position: relative;
+  background-color: #fafafa;
+  width: 100%;
+  height: 120vh;
+}
+
+.signup_inner_top {
+  position: absolute;
+  left: calc(50% - 11rem);
+  top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22rem;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0.1rem #e0e0e0;
+}
+
+.signup_inner_bottom {
+  position: absolute;
+  left: calc(50% - 11rem);
+  top: 35.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22rem;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: 0 0 0.5rem 0.1rem #e0e0e0;
+  border-radius: 1rem;
+}
+.go_to_signin {
+  margin: 0;
+  padding: 1.5rem;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.go_to_signin a {
+  text-decoration: none;
+  padding-left: 0.3rem;
+  color: #2ac7a2;
+  font-weight: bolder;
+}
+
+.selti_logo {
+  margin: 2rem;
+  width: 12rem;
+  height: 6rem;
+}
+
+.selti_logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.input_email_wrap {
+  position: relative;
+}
+
+.input_email {
+  margin: 0.5rem 1rem 0;
+  width: 14rem;
+  background-color: #fdfdfd;
+  border: 1px solid #cccccc;
+  border-radius: 0.3rem;
+  outline: none;
+}
+.input_email:focus {
+  border: 1px solid #2ac7a2;
+}
+.input_email_span {
+  position: absolute;
+  color: #999999;
+  left: 1.5rem;
+  transition: 0.2s all;
+}
+
+.input_name_wrap {
+  position: relative;
+}
+
+.input_name {
+  margin: 0 1rem 0;
+  width: 14rem;
+  background-color: #fdfdfd;
+  border: 1px solid #cccccc;
+  border-radius: 0.3rem;
+  outline: none;
+}
+
+.input_name:focus {
+  border: 1px solid #2ac7a2;
+}
+.input_name_span {
+  position: absolute;
+  color: #999999;
+  left: 1.5rem;
+  transition: 0.2s all;
+}
+
+.input_password_wrap {
+  position: relative;
+}
+
+.input_password {
+  margin: 0.5rem 1rem 0;
+  width: 14rem;
+  background-color: #fdfdfd;
+  border: 1px solid #cccccc;
+  border-radius: 0.3rem;
+  outline: none;
+}
+.input_password:focus {
+  border: 1px solid #2ac7a2;
+}
+.input_password_span {
+  position: absolute;
+  color: #999999;
+  left: 1.5rem;
+  transition: 0.2s all;
+}
+
+.siginup_submit {
+  margin-top: 1rem !important;
+  padding: 0.4rem 0 !important;
+  width: 65% !important;
+  border: none !important;
+  border-radius: 0.3rem !important;
+  background-color: #2ac7a2 !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 0.9rem !important;
+}
+.siginup_submit:disabled {
+  opacity: 0.5;
+}
+
+.help_messege {
+  color: rgb(208, 64, 64);
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  width: 70%;
+}
+
+.kakao_login {
+  width: 70%;
+  margin: 1.5rem;
+}
+
+.partition {
+  margin: 1.5rem 0 0 0;
+  width: 15.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.partition .partition_line {
+  width: 40%;
+  height: 1px;
+  background-color: #cccccc;
+}
+.partition .partition_text {
+  color: #999999;
+  font-size: 0.8rem;
+  font-weight: bolder;
+}
