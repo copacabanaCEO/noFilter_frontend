@@ -7,6 +7,8 @@ import { useNavigate } from "react-router";
 function Signup() {
   const [input_email_value, set_input_email_value] = useState("");
   const [input_password_value, set_input_password_value] = useState("");
+  const [input_password_check_value, set_input_password_check_value] =
+    useState("");
   const [input_name_value, set_input_name_value] = useState("");
   const [signup_failed, set_signup_failed] = useState("");
   const navigate = useNavigate();
@@ -20,6 +22,11 @@ function Signup() {
     const element = e.currentTarget;
     const value = element.value;
     set_input_password_value(value);
+  };
+  const handdle_passwod_check_input = (e) => {
+    const element = e.currentTarget;
+    const value = element.value;
+    set_input_password_check_value(value);
   };
   const handdle_name_input = (e) => {
     const element = e.currentTarget;
@@ -43,14 +50,26 @@ function Signup() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: {
+      body: JSON.stringify({
         name: input_name_value,
         email: input_email_value,
-        password: input_password_value,
-      },
+        password1: input_password_value,
+        password2: input_password_check_value,
+      }),
     };
-    fetch("API", request_options);
-    navigate("/additional");
+    fetch("http://10.36.180.153:8000/user/signup", request_options)
+      .then((response) =>
+        response.status >= 400
+          ? set_signup_failed(
+              "이름 또는 이메일 또는 비밀번호의 형식이 잘못되었습니다."
+            )
+          : response.json()
+      )
+      .then((res) => {
+        localStorage.setItem("access_token", res.access_token);
+        localStorage.setItem("refresh_token", res.refresh_token);
+        navigate("/additional");
+      });
   };
 
   return (
@@ -141,6 +160,36 @@ function Signup() {
             }}
           >
             비밀번호
+          </span>
+        </div>
+        <div className="input_password_wrap">
+          <input
+            type="password"
+            value={input_password_check_value}
+            autoComplete="on"
+            className="input_password"
+            onChange={handdle_passwod_check_input}
+            style={{
+              fontSize: `${
+                input_password_check_value !== "" ? "0.75" : "1"
+              }rem`,
+              padding: `${
+                input_password_check_value !== ""
+                  ? "1.025rem 0.5rem 0.35rem 0.5rem"
+                  : "0.5rem"
+              }`,
+            }}
+          ></input>
+          <span
+            className="input_password_span"
+            style={{
+              top: `${input_password_check_value !== "" ? "0.8" : "1.2"}rem`,
+              fontSize: `${
+                input_password_check_value !== "" ? "0.6" : "0.8"
+              }rem`,
+            }}
+          >
+            비밀번호확인
           </span>
         </div>
         <button

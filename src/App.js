@@ -13,12 +13,11 @@ import Header from "./layouts/Header";
 import { Switcher } from "./components/features/Navigation";
 
 const App = () => {
-  const [isLogin, setIsLogin] = useState(false);
   return (
     <div>
       <BrowserRouter>
-        <Header isLogin={isLogin} setIsLogin={setIsLogin} />
-        <Switcher setIsLogin={setIsLogin} />
+        <Header />
+        <Switcher />
       </BrowserRouter>
     </div>
   );

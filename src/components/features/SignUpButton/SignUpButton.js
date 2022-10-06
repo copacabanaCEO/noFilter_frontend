@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SignUpButton.css";
-const SignUpButton = ({ isLogin, setIsLogin }) => {
+const SignUpButton = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const navigate = useNavigate();
 
+  console.log(localStorage.getItem("access_token"));
+
   return (
     <div className="signUpButton">
-      {!isLogin && (
+      {!localStorage.getItem("access_token") && (
         <>
           <a href="/signup" className="goToSignUp">
             회원가입
@@ -17,7 +19,7 @@ const SignUpButton = ({ isLogin, setIsLogin }) => {
           </a>
         </>
       )}
-      {isLogin && (
+      {localStorage.getItem("access_token") && (
         <div className="userTitle" onMouseOver={() => setIsMenuVisible(true)}>
           홍길동님 안녕하세요
         </div>
@@ -53,7 +55,7 @@ const SignUpButton = ({ isLogin, setIsLogin }) => {
             <button
               className="generalLogout"
               onClick={() => {
-                setIsLogin(false);
+                localStorage.removeItem("access_token");
                 navigate("/login");
                 setIsMenuVisible(false);
               }}

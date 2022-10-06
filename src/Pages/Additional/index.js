@@ -36,35 +36,6 @@ function Additional() {
     setUserBirthLast(value);
   };
 
-  // function loadData() {
-  //   const requestOptions = {
-  //     method: "GET",
-  //     // mode: "cors",
-  //     // dataType: "jsonp",
-  //     headers: {
-  //       "Content-Type": "Application/json",
-  //       // "Access-Control-Allow-Origin": "http://localhost:8000/",
-  //       // "Access-Control-Allow-Headers":
-  //       //   "Authorization, Access-Control-Allow-Origin, access-control-allow-origin, Content-Type, access-control-max-age",
-  //       // "Access-Control-Allow-Credentials": "true",
-  //     },
-  //     // body: JSON.stringify(data),
-  //   };
-  //   fetch(`https://9015-61-42-176-8.jp.ngrok.io/posts/`, requestOptions)
-  //     .then((response) => {
-  //       console.log(response.json());
-  //       console.log("성공");
-  //     })
-  //     // .then((data) => {
-  //     //   console.log(data);
-  //     // })
-  //     .catch((err) => {
-  //       console.log("error! :" + err);
-  //       console.log(requestOptions);
-  //       console.log("실팬");
-  //     });
-  // }
-
   const validation = () => {
     if (
       selectedPosition === -1 &&

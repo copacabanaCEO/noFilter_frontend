@@ -4,7 +4,7 @@ import "./index.css";
 import instance_logo from "./instance_logo.png";
 import { useNavigate } from "react-router";
 
-function Signin({ setIsLogin }) {
+function Signin() {
   const [input_email_value, set_input_email_value] = useState("");
   const [input_password_value, set_input_passwod_value] = useState("");
   const [login_failed, set_login_failed] = useState("");
@@ -35,14 +35,22 @@ function Signin({ setIsLogin }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: {
+      body: JSON.stringify({
         email: input_email_value,
         password: input_password_value,
-      },
+      }),
     };
-    fetch("API", request_options);
-    setIsLogin(true);
-    navigate("/");
+    fetch("http://10.36.180.153:8000/user/login/", request_options)
+      .then((response) =>
+        response.status >= 400
+          ? set_signup_failed("이메일 또는 비밀번호가 잘못되었습니다.")
+          : response.json()
+      )
+      .then((res) => {
+        localStorage.setItem("refresh_token", res.refresh_token);
+        localStorage.setItem("access_token", res.access_token);
+        navigate("/");
+      });
   };
 
   return (
