@@ -4,6 +4,10 @@ import "./index.css";
 
 function Additional() {
   const navigate = useNavigate();
+
+  /**
+   * 회원유형, 고등학교, 고등학교 리스트 렌더링 여부, 지역, 지역 리스트 렌더링 여부, 생일, 알람메세지, 성별 State 입니다.
+   */
   const [selectedPosition, setSelectedPosition] = useState(-1);
   const [selectedHighSchool, setSelectedHighSchool] = useState({
     id: 0,
@@ -21,22 +25,42 @@ function Additional() {
   });
   const [userBirthLast, setUserBirthLast] = useState("");
 
+  /**
+   * 고등학교 검색 관련 Input의 Value를 입력하는 함수입니다.
+   * onchange이벤트를 통해서 selectedHighSchool State에 저장됩니다.
+   */
   const handleSearchHighSchool = (event) => {
     const { value } = event.currentTarget;
     setSelectedHighSchool({ id: 0, name: value });
   };
+
+  /**
+   * 유저 생일 입력 Input의 Value를 입력하는 함수입니다.
+   * onchange이벤트를 통해서 userBirth State에 저장됩니다.
+   */
   const handleUserBirth = (event) => {
     const { value } = event.currentTarget;
     setUserBirth(value);
   };
 
+  /**
+   * 유저의 성별 Input의 Value를 입력하는 함수입니다.
+   * onchange이벤트를 통해서 userBirthLast State에 저장됩니다.
+   * 주민등록번호 7번째 자릿수로 판별합니다.
+   */
   const handleUserBirthLast = (e) => {
     const { value } = e.currentTarget;
-
     setUserBirthLast(value);
   };
 
-  const validation = () => {
+  /**
+   * 추가정보입력 완료 버튼에서 실행되는 함수입니다.
+   * 각 입력란, 체크항목을 모두 유효성 검사하여 통과하면 추가정보기입 API를 호출합니다.
+   * 통과하지 못한 경우에는 알림 메세지를 출력합니다.
+   */
+  const validation = (event) => {
+    event.preventDefault();
+
     if (
       selectedPosition === -1 &&
       selectedHighSchool.id === 0 &&
@@ -113,14 +137,16 @@ function Additional() {
 
   const completeSignUp = () => {
     const data = {
-      highschool_name: selectedHighSchool.name,
-      location: selectedLocation,
       status:
         selectedPosition === 1
           ? "학생"
           : selectedPosition === 2
           ? "학부모"
           : "선생님",
+      highschool: {
+        name: selectedHighSchool.name,
+        location: selectedLocation,
+      },
       birthday:
         userBirth.slice(0, 2) +
         "/" +
@@ -132,25 +158,23 @@ function Additional() {
     };
 
     const requestOptions = {
-      method: "POST",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("access_token"),
       },
-      body: data,
+      body: JSON.stringify(data),
     };
-    fetch("API", requestOptions);
+
+    fetch("http://10.36.180.196:8000/selT/users", requestOptions)
+      .then((response) => response.json())
+      .then((res) => localStorage.setItem("user_name", res));
     navigate("/");
   };
 
   return (
     <div className="additonal">
-      <form
-        className="additonalInner"
-        onSubmit={(e) => {
-          e.preventDefault();
-          validation();
-        }}
-      >
+      <form className="additonalInner" onSubmit={validation}>
         <div className="additonalInnerAlign">
           <div className="additonalInnerTitle">추가정보입력</div>
           <div className="selectedPositionTitle">회원유형</div>
@@ -364,7 +388,7 @@ export default Additional;
 const ListData = [
   {
     id: 1,
-    name: "가가고",
+    name: "보성고",
     location: ["서울"],
   },
   {

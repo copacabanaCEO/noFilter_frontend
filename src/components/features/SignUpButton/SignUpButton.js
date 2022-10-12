@@ -5,8 +5,6 @@ const SignUpButton = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const navigate = useNavigate();
 
-  console.log(localStorage.getItem("access_token"));
-
   return (
     <div className="signUpButton">
       {!localStorage.getItem("access_token") && (
@@ -19,11 +17,12 @@ const SignUpButton = () => {
           </a>
         </>
       )}
-      {localStorage.getItem("access_token") && (
-        <div className="userTitle" onMouseOver={() => setIsMenuVisible(true)}>
-          홍길동님 안녕하세요
-        </div>
-      )}
+      {localStorage.getItem("access_token") &&
+        localStorage.getItem("user_name") && (
+          <div className="userTitle" onMouseOver={() => setIsMenuVisible(true)}>
+            {localStorage.getItem("user_name")}
+          </div>
+        )}
       {isMenuVisible && (
         <div
           className="userMenuWrap"
