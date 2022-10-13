@@ -67,7 +67,7 @@ function Signin() {
         password: input_password_value,
       }),
     };
-    fetch("http://10.36.180.153:8000/user/login/", request_options)
+    fetch("http://10.36.180.175:8000/user/login/", request_options)
       .then((response) =>
         response.status >= 400
           ? set_signup_failed("이메일 또는 비밀번호가 잘못되었습니다.")

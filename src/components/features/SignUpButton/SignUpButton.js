@@ -7,7 +7,7 @@ const SignUpButton = () => {
 
   return (
     <div className="signUpButton">
-      {!localStorage.getItem("access_token") && (
+      {!localStorage.getItem("user_name") && (
         <>
           <a href="/signup" className="goToSignUp">
             회원가입
@@ -17,12 +17,11 @@ const SignUpButton = () => {
           </a>
         </>
       )}
-      {localStorage.getItem("access_token") &&
-        localStorage.getItem("user_name") && (
-          <div className="userTitle" onMouseOver={() => setIsMenuVisible(true)}>
-            {localStorage.getItem("user_name")}
-          </div>
-        )}
+      {localStorage.getItem("user_name") && (
+        <div className="userTitle" onMouseOver={() => setIsMenuVisible(true)}>
+          {localStorage.getItem("user_name")}
+        </div>
+      )}
       {isMenuVisible && (
         <div
           className="userMenuWrap"

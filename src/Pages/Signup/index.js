@@ -96,7 +96,7 @@ function Signup() {
         password2: input_password_check_value,
       }),
     };
-    fetch("http://10.36.180.196:8000/user/signup", request_options)
+    fetch("http://10.36.180.175:8000/user/signup", request_options)
       .then((response) =>
         response.status >= 400
           ? set_signup_failed(

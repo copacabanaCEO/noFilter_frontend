@@ -166,10 +166,13 @@ function Additional() {
       body: JSON.stringify(data),
     };
 
-    fetch("http://10.36.180.196:8000/selT/users", requestOptions)
+    fetch("http://10.36.180.175:8000/selT/users", requestOptions)
       .then((response) => response.json())
       .then((res) => localStorage.setItem("user_name", res));
-    navigate("/");
+    setTimeout(() => {
+      navigate("/");
+      window.scrollTo(0, 0);
+    }, 200);
   };
 
   return (
