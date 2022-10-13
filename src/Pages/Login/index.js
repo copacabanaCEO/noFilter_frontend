@@ -74,9 +74,13 @@ function Signin() {
           : response.json()
       )
       .then((res) => {
+        console.log(res);
         localStorage.setItem("refresh_token", res.refresh_token);
         localStorage.setItem("access_token", res.access_token);
-        navigate("/");
+        localStorage.setItem("user_name", "박승민님 안녕하세요");
+        setTimeout(() => {
+          navigate("/");
+        }, 200);
       });
   };
 
