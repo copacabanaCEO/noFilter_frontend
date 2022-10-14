@@ -4,7 +4,7 @@ import SignUpButton from "../../components/features/SignUpButton/SignUpButton";
 import SearchField from "../../components/features/Search";
 import Navigation from "../../components/features/Navigation";
 
-const Header = ({ isLogin, setIsLogin }) => {
+const Header = () => {
   return (
     <Fragment>
       <header className="flex justify-start bg-brand-dark py-2 px-10 items-center">
@@ -15,7 +15,7 @@ const Header = ({ isLogin, setIsLogin }) => {
             <Navigation />
           </div>
           <div className="flex xs:hidden items-center ml-auto">
-            <SignUpButton isLogin={isLogin} setIsLogin={setIsLogin} />
+            <SignUpButton />
           </div>
         </div>
       </header>

@@ -12,7 +12,7 @@ import Home, {
 } from "../../../Pages/index.js";
 import KakaoLogin from "../../../Pages/KakaoLogin.js";
 
-const Switcher = ({ setIsLogin }) => (
+const Switcher = () => (
   <Routes>
     <Route path="/reviews" element={<ReviewsPage />} />
     <Route path="/posts" element={<PostsPage />} />
@@ -20,7 +20,7 @@ const Switcher = ({ setIsLogin }) => (
     <Route path="/" element={<Home />} />
     <Route path="/mypage/profile" element={<Profile />} />
     <Route path="/signup" element={<Signup />} />
-    <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
+    <Route path="/login" element={<Login />} />
     <Route path="/additional" element={<AdditionalPage />} />
     <Route path="/kakaologin" element={<KakaoLogin />} />
     <Route path="/mypage/settings" element={<SettingsPage />} />

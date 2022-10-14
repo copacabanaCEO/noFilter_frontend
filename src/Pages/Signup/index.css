@@ -22,7 +22,7 @@
 .signup_inner_bottom {
   position: absolute;
   left: calc(50% - 11rem);
-  top: 35.5rem;
+  top: 39rem;
   display: flex;
   flex-direction: column;
   align-items: center;
